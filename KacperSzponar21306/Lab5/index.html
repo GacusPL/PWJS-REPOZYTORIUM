@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab5</title>
+</head>
+
+<body>
+    <div>
+        <script>
+
+            let tablica = ['Wartość 1'];
+            tablica[tablica.length] = 'Wartość 2';
+            tablica.push('Wartość 3', 'Wartość 4', 'Wartość 5',)
+            tablica[5] = 'Wartość 6';
+            tablica.unshift('Wartość 0')
+            document.write(tablica);
+
+            let nowaTablica = ['1', '2', '3', '4'];
+            document.write('<p>Pierwszy element to: <strong>');
+            document.write(nowaTablica[0] + '</strong></p>');
+
+            document.write('<p>Ostatni element to: <strong>');
+            document.write(nowaTablica[nowaTablica.length - 1] + '</strong></p>');
+
+            nowaTablica.unshift('0')
+            document.write('<p>Pierwszy element po unshift() to: <strong>');
+            document.write(nowaTablica[0] + '</strong></p>');
+
+        </script>
+    </div>
+
+    <div id="podsumowanie"></div>
+
+    <script>
+        let paragrafy = document.getElementsByTagName("p");
+
+        let liczbaParagrafow = paragrafy.length;
+
+        document.getElementById("podsumowanie").innerHTML =
+            "Liczba elementów <strong>&lt;p&gt;</strong> utworzonych dynamicznie na stronie: " + liczbaParagrafow;
+    </script>
+    <hr>
+    </hr>
+    <section id="main-page"></section>
+
+    <script>
+        let dane = ['Kacper', 'Szponar', 'Student', 'Informatyka', '2025'];
+
+        let mainPage = document.getElementById("main-page");
+
+        let p1 = document.createElement("p");
+        let p2 = document.createElement("p");
+
+        p1.innerHTML = "Imię i nazwisko: " + dane[0] + " " + dane[1];
+        p2.innerHTML = "Kierunek i rok: " + dane[3] + ", " + dane[4];
+
+        mainPage.appendChild(p1);
+        mainPage.appendChild(p2);
+
+        let i = 0;
+        let half = Math.floor(dane.length / 2);
+        let wynikWhile = document.createElement("p");
+        wynikWhile.innerHTML = "Połowa tablicy (while): ";
+        while (i < half) {
+            wynikWhile.innerHTML += dane[i] + " ";
+            i++;
+        }
+        mainPage.appendChild(wynikWhile);
+
+        let wynikFor = document.createElement("p");
+        wynikFor.innerHTML = "Połowa tablicy (for): ";
+        for (let j = half; j < dane.length; j++) {
+            wynikFor.innerHTML += dane[j] + " ";
+        }
+        mainPage.appendChild(wynikFor);
+
+        let btn = document.createElement("button");
+        btn.textContent = "Pokaż moje dane";
+        btn.onclick = pokazDane;
+        mainPage.appendChild(btn);
+
+        function pokazDane() {
+            let tekst1 = p1.textContent;
+            let tekst2 = p2.textContent;
+            alert("Twoje dane:\n" + tekst1 + "\n" + tekst2);
+        }
+    </script>
+</body>
+
+</html>

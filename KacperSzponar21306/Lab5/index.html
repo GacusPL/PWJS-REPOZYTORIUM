@@ -43,7 +43,7 @@
             "Liczba elementów <strong>&lt;p&gt;</strong> utworzonych dynamicznie na stronie: " + liczbaParagrafow;
     </script>
     <hr>
-    </hr>
+
     <section id="main-page"></section>
 
     <script>
@@ -88,6 +88,66 @@
             alert("Twoje dane:\n" + tekst1 + "\n" + tekst2);
         }
     </script>
+    <hr>
+
+    <section id="quiz-section"></section>
+
+    <script>
+        const questions = [
+            ['Ile księżyców ma Ziemia?', 1],
+            ['Ile księżyców ma Saturn?', 62],
+            ['Ile księżyców ma Wenus?', 0]
+        ];
+
+        let quizSection = document.getElementById("quiz-section");
+        let score = 0;
+        let currentQuestion = 0;
+
+        function showQuestion() {
+            quizSection.innerHTML = "";
+
+            if (currentQuestion < questions.length) {
+                let questionText = document.createElement("p");
+                questionText.textContent = questions[currentQuestion][0];
+                quizSection.appendChild(questionText);
+
+                let input = document.createElement("input");
+                input.type = "number";
+                input.id = "user-answer";
+                quizSection.appendChild(input);
+
+                let submitBtn = document.createElement("button");
+                submitBtn.textContent = "Sprawdź odpowiedź";
+                submitBtn.onclick = checkAnswer;
+                quizSection.appendChild(submitBtn);
+            } else {
+                showResults();
+            }
+        }
+
+        function checkAnswer() {
+            let userAnswer = document.getElementById("user-answer").value;
+            let correctAnswer = questions[currentQuestion][1];
+
+            if (parseInt(userAnswer) === correctAnswer) {
+                alert('Prawidłowa odpowiedź!');
+                score++;
+            } else {
+                alert('Błąd. Prawidłowa odpowiedź to ' + correctAnswer);
+            }
+
+            currentQuestion++;
+            showQuestion();
+        }
+
+        function showResults() {
+            quizSection.innerHTML = "<h3>Koniec quizu!</h3>" +
+                "<p>Twój wynik: " + score + " / " + questions.length + "</p>";
+        }
+
+        showQuestion();
+    </script>
+
 </body>
 
 </html>

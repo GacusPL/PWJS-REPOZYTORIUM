@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 6</title>
+</head>
+
+<body>
+    <section id="Projekt 1"></section>
+
+    <script>
+        const questions = [
+            ['Pytanie 1', 1],
+            ['Pytanie 2', 2]
+
+        ];
+
+        let quizSection = document.getElementById("Projekt 1");
+        let score = 0;
+        let q = 0;
+
+        function showQuestion() {
+            quizSection.innerHTML = "";
+
+            if (q < questions.length) {
+                let questionText = document.createElement("p");
+                questionText.textContent = questions[q][0];
+                quizSection.appendChild(questionText);
+
+                let input = document.createElement("input");
+                input.type = "number";
+                input.id = "user-answer";
+                quizSection.appendChild(input);
+
+                let submitBtn = document.createElement("button");
+                submitBtn.textContent = "Sprawdź odpowiedź";
+                submitBtn.onclick = checkAnswer;
+                quizSection.appendChild(submitBtn);
+            } else {
+                showResults();
+            }
+        }
+
+        function checkAnswer() {
+            let userAnswer = document.getElementById("user-answer").value;
+            let correctAnswer = questions[q][1];
+
+            if (parseInt(userAnswer) === correctAnswer) {
+                alert('Prawidłowa odpowiedź!');
+                score++;
+            } else {
+                alert('Błąd. Prawidłowa odpowiedź to ' + correctAnswer);
+            }
+
+            q++;
+            showQuestion();
+        }
+
+        function showResults() {
+            quizSection.innerHTML = "<h3>Koniec quizu!</h3>" +
+                "<p>Twój wynik: " + score + " / " + questions.length + "</p>";
+        }
+
+        showQuestion();
+    </script>
+
+</body>
+
+</html>

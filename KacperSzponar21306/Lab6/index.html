@@ -39,7 +39,11 @@
                 submitBtn.onclick = checkAnswer;
                 quizSection.appendChild(submitBtn);
             } else {
-                showResults();
+                let message = 'Liczba punktów: ' + score;
+                message += ' z ' + questions.length;
+                message += '.';
+                document.write('<p>Koniec quizu!</p>');
+                document.write('<p>' + message + '</p>');
             }
         }
 
@@ -56,11 +60,6 @@
 
             q++;
             showQuestion();
-        }
-
-        function showResults() {
-            quizSection.innerHTML = "<h3>Koniec quizu!</h3>" +
-                "<p>Twój wynik: " + score + " / " + questions.length + "</p>";
         }
 
         showQuestion();

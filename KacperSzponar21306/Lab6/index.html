@@ -5,16 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 6</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <section id="Projekt 1"></section>
+    <div id="quiz-container">
+        <section id="Projekt 1"></section>
+    </div>
 
     <script>
         const questions = [
-            ['Pytanie 1', 1],
-            ['Pytanie 2', 2]
-
+            ['Ile to 2 + 2 * 2?', '6'],
+            ['Stolica Polski?', 'Warszawa'],
+            ['Ile kontynentów jest na Ziemi?', '7'],
         ];
 
         let quizSection = document.getElementById("Projekt 1");
@@ -25,37 +28,36 @@
             quizSection.innerHTML = "";
 
             if (q < questions.length) {
-                let questionText = document.createElement("p");
+                const questionText = document.createElement("p");
                 questionText.textContent = questions[q][0];
                 quizSection.appendChild(questionText);
 
-                let input = document.createElement("input");
-                input.type = "number";
+                const input = document.createElement("input");
                 input.id = "user-answer";
+                input.placeholder = "Wpisz odpowiedź...";
                 quizSection.appendChild(input);
 
-                let submitBtn = document.createElement("button");
+                const submitBtn = document.createElement("button");
                 submitBtn.textContent = "Sprawdź odpowiedź";
                 submitBtn.onclick = checkAnswer;
                 quizSection.appendChild(submitBtn);
             } else {
-                let message = 'Liczba punktów: ' + score;
-                message += ' z ' + questions.length;
-                message += '.';
-                document.write('<p>Koniec quizu!</p>');
-                document.write('<p>' + message + '</p>');
+                quizSection.innerHTML = `
+                    <p><strong>Koniec quizu!</strong></p>
+                    <p>Liczba punktów: ${score} z ${questions.length}.</p>
+                `;
             }
         }
 
         function checkAnswer() {
-            let userAnswer = document.getElementById("user-answer").value;
-            let correctAnswer = questions[q][1];
+            const userAnswer = document.getElementById("user-answer").value;
+            const correctAnswer = questions[q][1];
 
-            if (parseInt(userAnswer) === correctAnswer) {
+            if (userAnswer.trim().toLowerCase() === correctAnswer.toLowerCase()) {
                 alert('Prawidłowa odpowiedź!');
                 score++;
             } else {
-                alert('Błąd. Prawidłowa odpowiedź to ' + correctAnswer);
+                alert('Błąd. Prawidłowa odpowiedź to: ' + correctAnswer);
             }
 
             q++;
@@ -64,7 +66,6 @@
 
         showQuestion();
     </script>
-
 </body>
 
 </html>

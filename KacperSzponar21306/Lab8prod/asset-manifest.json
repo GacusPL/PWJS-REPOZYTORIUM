@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/PWJS-REPOZYTORIUM/KacperSzponar21306/Lab8prod/static/css/main.f855e6bc.css",
+    "main.js": "/PWJS-REPOZYTORIUM/KacperSzponar21306/Lab8prod/static/js/main.15f39f8c.js",
+    "static/js/453.ed3810f9.chunk.js": "/PWJS-REPOZYTORIUM/KacperSzponar21306/Lab8prod/static/js/453.ed3810f9.chunk.js",
+    "index.html": "/PWJS-REPOZYTORIUM/KacperSzponar21306/Lab8prod/index.html",
+    "main.f855e6bc.css.map": "/PWJS-REPOZYTORIUM/KacperSzponar21306/Lab8prod/static/css/main.f855e6bc.css.map",
+    "main.15f39f8c.js.map": "/PWJS-REPOZYTORIUM/KacperSzponar21306/Lab8prod/static/js/main.15f39f8c.js.map",
+    "453.ed3810f9.chunk.js.map": "/PWJS-REPOZYTORIUM/KacperSzponar21306/Lab8prod/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.15f39f8c.js"
+  ]
+}

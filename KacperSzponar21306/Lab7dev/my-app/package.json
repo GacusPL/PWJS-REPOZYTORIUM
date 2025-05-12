@@ -2,6 +2,7 @@
   "name": "lab7",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://gacuspl.github.io/PWJS-REPOZYTORIUM/KacperSzponar21306/Lab7prod/",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",

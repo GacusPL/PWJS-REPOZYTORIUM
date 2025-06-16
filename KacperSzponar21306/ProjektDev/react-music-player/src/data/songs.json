@@ -4,40 +4,35 @@
         "title": "Bound 2",
         "artist": "Kanye West",
         "src": "/songs/Bound2.mp3",
-        "cover": "/covers/yeezuscover.jpg",
-        "isFavorite": false
+        "cover": "/covers/yeezuscover.jpg"
     },
      {
         "id": 2,
         "title": "Sail",
         "artist": "Awolnation",
         "src": "/songs/Sail.mp3",
-        "cover": "/covers/Sail.jpg",
-        "isFavorite": false
+        "cover": "/covers/Sail.jpg"
     },
      {
         "id": 3,
         "title": "Agharta",
         "artist": "Westbam",
         "src": "/songs/Agharta.mp3",
-        "cover": "/covers/brak.jpg",
-        "isFavorite": false
+        "cover": "/covers/brak.jpg"
     },
      {
         "id": 4,
         "title": "Baptized In Fear",
         "artist": "The Weeknd",
         "src": "/songs/BaptizedInFear.mp3",
-        "cover": "/covers/HurryUpTomorrow.jpg",
-        "isFavorite": false
+        "cover": "/covers/HurryUpTomorrow.jpg"
     },
      {
         "id": 5,
         "title": "Paranoid",
         "artist": "Kanye West",
         "src": "/songs/Paranoid.mp3",
-        "cover": "/covers/808.jpg",
-        "isFavorite": false
+        "cover": "/covers/808.jpg"
     }
     
 ]

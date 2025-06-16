@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/PWJS-REPOZYTORIUM/KacperSzponar21306/ProjektProd/static/css/main.3722803a.css",
+    "main.js": "/PWJS-REPOZYTORIUM/KacperSzponar21306/ProjektProd/static/js/main.bf752a08.js",
+    "index.html": "/PWJS-REPOZYTORIUM/KacperSzponar21306/ProjektProd/index.html",
+    "main.3722803a.css.map": "/PWJS-REPOZYTORIUM/KacperSzponar21306/ProjektProd/static/css/main.3722803a.css.map",
+    "main.bf752a08.js.map": "/PWJS-REPOZYTORIUM/KacperSzponar21306/ProjektProd/static/js/main.bf752a08.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3722803a.css",
+    "static/js/main.bf752a08.js"
+  ]
+}
